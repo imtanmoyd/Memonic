@@ -1,17 +1,6 @@
 # Welcome to your SoulMate project
 
 ## Project info
-
-**URL**: https://lovable.dev/projects/5223c882-3d17-4d6c-9eff-25ba2af10e18
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/5223c882-3d17-4d6c-9eff-25ba2af10e18) and start prompting.
-
 Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
@@ -59,12 +48,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5223c882-3d17-4d6c-9eff-25ba2af10e18) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
 
