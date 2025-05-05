@@ -52,18 +52,21 @@ const useUserManagement = (): UseUserManagementReturn => {
     try {
       setIsLoading(true);
       
+      // Create a properly typed notification
+      const welcomeNotification: Notification = {
+        id: uuidv4(),
+        type: 'new-story', // Using one of the allowed literal types
+        message: 'Welcome to SoulCast! Your anonymous stories await.',
+        timestamp: Date.now(),
+        read: false,
+      };
+      
       const newUser: User = {
         id: uuidv4(),
         username: `Soul${Math.floor(Math.random() * 10000)}`,
         friendCode: `${Math.random().toString(36).substring(2, 6)}-${Math.random().toString(36).substring(2, 6)}`,
         friends: [],
-        notifications: [{
-          id: uuidv4(),
-          type: 'new-story',
-          message: 'Welcome to SoulCast! Your anonymous stories await.',
-          timestamp: Date.now(),
-          read: false,
-        }],
+        notifications: [welcomeNotification],
       };
       
       setUser(newUser);
