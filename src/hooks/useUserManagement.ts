@@ -92,22 +92,22 @@ const useUserManagement = (): UseUserManagementReturn => {
           return false;
         }
         
-        const updatedUser = {
-          ...user,
-          friends: [...user.friends, friendCode],
-          notifications: [
-            ...user.notifications,
-            {
-              id: uuidv4(),
-              type: 'friend-accepted',
-              message: 'New friend added!',
-              timestamp: Date.now(),
-              read: false,
-            },
-          ],
+        // Create a properly typed notification
+        const newNotification: Notification = {
+          id: uuidv4(),
+          type: 'friend-accepted', // Using one of the allowed literal types
+          message: 'New friend added!',
+          timestamp: Date.now(),
+          read: false,
         };
         
-        setUser(updatedUser);
+        // Update user state with type-safe properties
+        setUser({
+          ...user,
+          friends: [...user.friends, friendCode],
+          notifications: [...user.notifications, newNotification],
+        });
+        
         toast.success('Friend added successfully');
         return true;
       } catch (err) {
