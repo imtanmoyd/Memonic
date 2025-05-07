@@ -104,6 +104,20 @@
   .story-fade-in {
     @apply animate-fade-in;
   }
+  
+  /* New components for Memomic */
+  .memo-card {
+    @apply relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
+           transition-all duration-300 hover:shadow-xl hover:bg-white/15 p-4;
+  }
+  
+  .emotion-tag {
+    @apply px-3 py-1 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+  
+  .memo-action {
+    @apply rounded-full p-2 transition-all hover:bg-white/20 text-white/80 hover:text-white;
+  }
 }
 
 @keyframes float {
@@ -130,4 +144,41 @@
 
 .pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Enhanced animations for Memomic */
+@keyframes memo-appear {
+  0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.memo-appear {
+  animation: memo-appear 0.5s forwards;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 25%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Map pin animation */
+@keyframes pin-drop {
+  0% { transform: translateY(-20px); opacity: 0; }
+  60% { transform: translateY(5px); opacity: 1; }
+  80% { transform: translateY(-2px); }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.pin-drop {
+  animation: pin-drop 0.5s forwards;
 }

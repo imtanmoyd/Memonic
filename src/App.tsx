@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import StoryDetail from "./pages/StoryDetail";
 import NotFound from "./pages/NotFound";
 
+// Initialize QueryClient for data fetching
 const queryClient = new QueryClient();
 
 const App = () => (

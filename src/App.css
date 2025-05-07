@@ -6,10 +6,12 @@
   text-align: center;
   background: linear-gradient(135deg, #9b87f5 0%, #e5deff 100%);
   min-height: 100vh;
+  background-attachment: fixed;
 }
 
 body {
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -64,6 +66,39 @@ body {
   box-shadow: 0 10px 25px rgba(155, 135, 245, 0.3);
 }
 
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+/* 3D button effect */
+.button-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-3d:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-3d:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Landing page specific styles */
+.landing-page h1, 
+.landing-page h2 {
+  background: linear-gradient(to right, #9b87f5, #33C3F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -81,4 +116,24 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(155, 135, 245, 0.8);
+}
+
+/* Enhanced animations */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(155, 135, 245, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(155, 135, 245, 0.8); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
 }
