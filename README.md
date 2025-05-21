@@ -13,10 +13,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone https://github.com/imtanmoyd/SoulMate.git
+git clone https://github.com/imtanmoyd/Memonic.git
 
 # Step 2: Navigate to the project directory.
-cd SoulMate
+cd Memonic
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -53,4 +53,3 @@ Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
